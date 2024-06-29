@@ -1,6 +1,5 @@
-use std::cmp::Reverse;
 use std::collections::HashMap;
-use std::fs::{File, OpenOptions};
+use std::fs::OpenOptions;
 use std::io;
 use std::path::Path;
 
@@ -10,7 +9,6 @@ use sha1::{Digest, Sha1};
 
 const HASH_BYTES: usize = 20;
 const BLOCK_SIZE: usize = 8 * 1024;
-const MMAP_BLOCK_SIZE: usize = 1024 * 1024 * 128;
 
 #[derive(Debug)]
 struct MappedFile {
