@@ -174,7 +174,7 @@ fn find(index_path: &Path, cache_device_path: &Path, cache_block_size: usize) ->
 }
 
 fn main() -> io::Result<()> {
-    let matches = App::new("Filesystem Tool")
+    let matches = App::new("cache_guess")
         .subcommand(
             SubCommand::with_name("collect")
                 .arg(Arg::with_name("index").required(true))
